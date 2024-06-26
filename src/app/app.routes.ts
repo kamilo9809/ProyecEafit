@@ -112,4 +112,9 @@ export const routes: Routes = [
       ),
     children: [],
   },
+  {
+    path:"",
+    redirectTo:"inicio",
+    pathMatch:"full"
+  }
 ];
