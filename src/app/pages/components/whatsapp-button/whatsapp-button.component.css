@@ -6,7 +6,34 @@
 .design{
     background: none;
     border: none;
+}
+
+.animation{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
 
 }
 
+.animation{
+    border: 2px solid black;
+    margin-bottom: 5px;
+    display: inline;
 
+    animation-name: animaciontext;
+    animation-duration: 2s;
+    animation-iteration-count: unset;
+}
+
+@keyframes animaciontext{
+    0%{
+        background-color: brown;
+    }
+    100%{
+        background-color: aqua;
+        display: none;
+    }
+    
+}
