@@ -7,55 +7,76 @@
 
 .contact-form-container {
     display: flex;
-    background-color:#2F6475BD;
+    flex-direction: column; /* Column layout for small screens */
+    align-items: center;
+    background-color: #2F6475;
+    opacity: 0.74;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    max-width: 1152px;
     width: 100%;
+    margin-top: 20px; /* Adjust as needed */
+    text-align: left;
 }
 
 .contact-image {
-    flex: 1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    position: relative;
     padding: 10px;
+    text-align: center;
 }
 
 .contact-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 10px;
+}
+
+.contact-title {
+    color: #FFFFFF;
+    font-size: 32px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
 }
 
 .contact-form-wrapper {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     padding: 10px;
-}
-
-.contact-form-wrapper h2 {
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 #contact-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 #contact-form input, #contact-form textarea {
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #ECFFFF;
+    border-radius: 10px;
+    width: calc(100% - 20px); /* Responsive width */
+    max-width: 512px;
+    box-sizing: border-box;
 }
 
 #contact-form textarea {
-    resize: vertical;
+    height: 192px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: none; /* Prevent resizing */
 }
 
 #submit-btn {
+    font-size: 32px;
     padding: 10px;
     border: none;
     border-radius: 4px;
@@ -66,12 +87,31 @@
 
 #submit-btn:enabled {
     cursor: pointer;
-    opacity: 1;
 }
 
 p {
-    font-size: 12px;
-    color: #666;
+    font-size: 20px;
+    color: white;
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contact-form-container {
+        flex-direction: row; /* Row layout for larger screens */
+    }
+
+    .contact-image, .contact-form-wrapper {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .contact-title {
+        font-size: 48px;
+    }
+
+    #contact-form input, #contact-form textarea {
+        width: 90%;
+        max-width: 512px;
+    }
 }
 
