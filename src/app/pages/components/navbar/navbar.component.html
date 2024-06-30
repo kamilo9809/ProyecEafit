@@ -1,14 +1,26 @@
-<nav class="nav-bar">
-  <ul>
-    <img src="/assets/LogoFATV.png">
-    @for (item of menu; track $index) {
-    <li>
+<img
+  class="position-absolute top-0 rigth-0"
+  src="/assets/LogoFATV.png"
+  height="130px"
+/>
+<nav class="container-fluid pt-3 mb-5">
+  <ul
+    class="ul-container rounded-4 container-fluid d-flex justify-content-evenly px-5 align-items-center list-unstyled"
+  >
+    <li
+      class="li-style"
+      *ngFor="let item of menu; let i = index"
+      [ngClass]="{
+        'custom-spacing': i >= 0 && i <= 3,
+        'buttons-edit': i >= 4 && i <= 5
+      }"
+    >
       <a
-       [routerLink]="item.path"
+        class="link-text text-decoration-none"
+        [routerLink]="item.path"
       >
         {{ item.title }}
       </a>
     </li>
-    }
   </ul>
 </nav>
