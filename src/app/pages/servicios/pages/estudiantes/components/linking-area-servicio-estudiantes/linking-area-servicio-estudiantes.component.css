@@ -1,0 +1,49 @@
+.contenedor{
+   width: 90%;
+   display: flex;
+   justify-content: center;
+}
+
+
+
+.Link{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   
+}
+
+.titulo{
+   font-size: 48px;
+   font-weight: bold;
+   font-family: Raleway;
+ }
+
+ .parrafo{
+   font-size: 36px ;
+   padding-top:50px;
+   font-family: Raleway; 
+   padding-bottom: 30px;
+ }
+ 
+ .enlace{
+   font-size: 40px;
+   color:black;
+   padding-top: 20px;
+   text-align: center;
+ }
+
+ .enlace:hover{
+   color: rgb(52, 52, 231);
+ }
+
+
+
+
+
+
+
+
+
+
+
