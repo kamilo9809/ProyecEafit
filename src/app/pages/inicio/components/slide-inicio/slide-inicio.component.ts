@@ -1,21 +1,37 @@
-import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  AfterViewInit,
+  Inject,
+  PLATFORM_ID,
+} from '@angular/core';
 import { SlideInicioService } from './service/slide-inicio.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-slide-inicio',
-  standalone:true,
+  standalone: true,
   templateUrl: './slide-inicio.component.html',
-  styleUrls: ['./slide-inicio.component.css']
+  styleUrls: ['./slide-inicio.component.css'],
 })
 export class SlideInicioComponent implements OnInit, AfterViewInit, OnDestroy {
+  private platformId: Object;
 
-  constructor(private slideInicioService: SlideInicioService) { }
+  constructor(
+    private slideInicioService: SlideInicioService,
+    @Inject(PLATFORM_ID) platformId: Object
+  ) {
+    this.platformId = platformId;
+  }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.slideInicioService.startAutoSlide();
-    this.setupArrowControls();
+    if (isPlatformBrowser(this.platformId)) {
+      this.slideInicioService.startAutoSlide();
+      this.setupArrowControls();
+    }
   }
 
   ngOnDestroy(): void {
@@ -23,10 +39,16 @@ export class SlideInicioComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   private setupArrowControls(): void {
-    const leftArrow = document.querySelector('.arrow.left')!;
-    const rightArrow = document.querySelector('.arrow.right')!;
+    if (isPlatformBrowser(this.platformId)) {
+      const leftArrow = document.querySelector('.arrow.left')!;
+      const rightArrow = document.querySelector('.arrow.right')!;
 
-    leftArrow.addEventListener('click', () => this.slideInicioService.changeSlide(-1));
-    rightArrow.addEventListener('click', () => this.slideInicioService.changeSlide(1));
+      leftArrow.addEventListener('click', () =>
+        this.slideInicioService.changeSlide(-1)
+      );
+      rightArrow.addEventListener('click', () =>
+        this.slideInicioService.changeSlide(1)
+      );
+    }
   }
 }
