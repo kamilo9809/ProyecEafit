@@ -1,5 +1,6 @@
 button {
     transition: transform .5s ease;
+    z-index: 20;
 }
 
 button:hover {
