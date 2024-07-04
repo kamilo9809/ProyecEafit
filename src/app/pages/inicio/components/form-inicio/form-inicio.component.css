@@ -58,14 +58,19 @@
     width: 100%;
 }
 
-#contact-form input, #contact-form textarea, #submit-btn {
+#contact-form input, #contact-form textarea {
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ECFFFF;
+    border: 1px solid #2F6475;
     border-radius: 10px;
     width: calc(100% - 20px);
     max-width: 512px;
     box-sizing: border-box;
+}
+
+input, textarea{
+    background-color: #ecffff86;
+    outline: none;
 }
 
 #contact-form textarea {
@@ -75,13 +80,17 @@
 }
 
 #submit-btn {
-    font-size: 32px;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    background-color: #00001A;
-    color: white;
-    cursor: not-allowed;
+    width: 509px;                 
+    height: 64px;                  
+    border-radius: 10px;           
+    border: none;                  
+    background-color: #00001A;     
+    color: white;                  
+    font-size: 32px;               
+    cursor: not-allowed;           
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #submit-btn:enabled {
@@ -94,6 +103,10 @@ p {
     color: white;
     text-align: center;
 }
+
+::placeholder {
+    color: #4E4848;
+}    
 
 @media (min-width: 768px) {
     .contact-form-container {
