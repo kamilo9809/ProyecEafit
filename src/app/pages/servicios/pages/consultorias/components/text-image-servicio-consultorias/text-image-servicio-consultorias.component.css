@@ -1,0 +1,41 @@
+.contenedor{
+    width: 90%;
+    display:row;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+}
+
+.Link{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo{
+    font-size: 48px;
+    font-weight: bold;
+    font-family: raleway;
+}
+
+.lista{
+    font-size: 36px;
+    padding-top:50px;
+}
+
+
+.contenedor2{
+    display: flex;
+    flex-direction: row;
+}
+
+.parrafo{
+    font-size: 36px;
+    padding-top: 50px;
+    padding-right: 50px;
+    font-family: Raleway;
+    padding-bottom: 30px;
+    justify-content: center;
+    text-align: justify;
+}
+
