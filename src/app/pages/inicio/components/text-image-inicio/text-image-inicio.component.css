@@ -1,0 +1,84 @@
+body {
+    font-family: 'Myriad Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e0dede;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #d1e8e2;
+}
+
+.text-container {
+    max-width: 600px;
+    margin-right: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    font-family: 'Impact', sans-serif;
+    font-size: 48px;
+    color: #000000;
+    background-color: #a3c9a8;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 22px;
+    font-family: myriad pro;
+    color: #333333;
+    background-color: #a3c9a8;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 20px 0;
+    
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-button {
+    background-color: #212121;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Lucida Fax', sans-serif;
+    font-size: 16px;
+}
+
+.contact-button:hover {
+    background-color: #000000;
+}
+
+.buttons span {
+    margin-left: 20px;
+}
+
+.image-container {
+    max-width: 400px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
