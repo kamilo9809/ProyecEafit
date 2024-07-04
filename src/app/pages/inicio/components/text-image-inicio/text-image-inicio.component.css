@@ -19,13 +19,19 @@ body {
     margin-right: 50px;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 h1 {
     font-family: 'Impact', sans-serif;
-    font-size: 36px;
+    font-size: 48px;
     color: #000000;
     background-color: #a3c9a8;
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
 }
 
 p {
@@ -46,6 +52,7 @@ p {
 .buttons {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 .contact-button {
@@ -65,23 +72,6 @@ p {
 
 .buttons span {
     margin-left: 20px;
-}
-
-.buttons a {
-    color: #ffffff;
-    font-family: 'Lucida Fax', sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-    border: 2px solid #000000;
-    padding: 15px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #000000;
-
-}
-
-.buttons a:hover {
-    text-decoration: underline;
 }
 
 .image-container {
