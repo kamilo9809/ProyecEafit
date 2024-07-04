@@ -3,8 +3,6 @@
    justify-content: center;
 }
 
-
-
 .Link{   
    width: 90%;
    display: flex;
@@ -37,13 +35,18 @@
    color: rgb(52, 52, 231);
  }
 
+ img {
+  animation: youtube 1s infinite alternate;
+}
 
-
-
-
-
-
-
-
-
-
+@keyframes youtube {
+  0% {
+      transform: rotate(10deg);
+  }
+  50% {
+      transform: rotate(-10deg);
+  }
+  100% {
+      transform: rotate(10deg);
+  }
+}

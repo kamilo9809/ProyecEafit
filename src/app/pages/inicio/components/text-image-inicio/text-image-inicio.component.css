@@ -1,17 +1,15 @@
-body {
-    font-family: 'Myriad Pro', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #e0dede;
-}
-
-.intro {
+.main{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    background-color: #d1e8e2;
+    padding-bottom: 50px;
+}
+
+.intro {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .text-container {
@@ -29,17 +27,18 @@ h1 {
     font-size: 48px;
     color: #000000;
     background-color: #a3c9a8;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
     text-align: center;
 }
 
 p {
     font-size: 22px;
-    font-family: myriad pro;
+    font-family: myriad;
+    line-height: 2;
     color: #333333;
     background-color: #a3c9a8;
-    padding: 40px;
+    padding: 65px;
     border-radius: 20px;
     margin: 20px 0;
     
@@ -50,12 +49,14 @@ p {
 }
 
 .buttons {
+    width: 100%;
     display: flex;
-    align-items: center;
-    gap: 20px;
+    align-items: stretch;
+    gap: 20px;;
 }
 
 .contact-button {
+    width: 100%;
     background-color: #212121;
     color: #ffffff;
     border: none;
@@ -75,7 +76,7 @@ p {
 }
 
 .image-container {
-    max-width: 400px;
+    max-width: full;
 }
 
 .image-container img {
