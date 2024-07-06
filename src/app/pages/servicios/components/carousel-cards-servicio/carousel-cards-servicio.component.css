@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.card-item {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(94, 94, 94);
+    align-items: center;
+    border-radius: 10px;
+    gap: 20px;
+    width: 400px;
+    margin: 30px;
+}
+
+.text-container {
+    background: linear-gradient(to right, #130556, #2A0BBC);  
+    color: white;
+    border-radius: 10px;
+}
+
+.text-container p, .text-container h2 {
+    padding: 10px;
+}
+
+img {
+    width: 350px;
+    height: auto;
+}
+
+button {
+    background-color: #00001A;
+    color: white;
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+}
+
