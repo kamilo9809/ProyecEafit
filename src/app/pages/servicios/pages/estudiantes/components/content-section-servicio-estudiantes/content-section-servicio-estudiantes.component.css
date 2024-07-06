@@ -1,0 +1,46 @@
+body{
+    font-family: 'Myriad Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+background-color: #e0dede;
+}
+.Orientation{
+    padding: 50px;
+background-color: #d1e8e2;
+}
+h1{
+    font-family: 'Impact',sans-serif;
+    font-size: 28px;
+color:#000000;
+}
+.content{
+    display: flex;
+    margin-top: 20px;
+}
+.image-container{
+    max-width: 300px;
+    margin-right: 20px;
+}
+image-container png{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.text-container{
+    max-width: 600px;
+}
+.item{
+    margin-bottom: 20px;
+}
+h2{
+    font-family: 'Lucida Fax', sans-serif;
+    font: size 20px; 
+    color:#000000;
+    margin: 10px 0; 
+}
+p{
+    font-size: 16px;
+    color: #333333;
+    margin:5px 0;
+}
