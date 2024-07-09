@@ -1,17 +1,11 @@
-body{
-    font-family: 'Myriad Pro', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-background-color: #e0dede;
-}
+
 .Orientation{
     padding: 50px;
 background-color: #d1e8e2;
 }
-h1{
+.main-title{
     font-family: 'Impact',sans-serif;
-    font-size: 28px;
+    font-size: 48px;
 color:#000000;
 }
 .content{
@@ -22,25 +16,26 @@ color:#000000;
     max-width: 300px;
     margin-right: 20px;
 }
-image-container png{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
+
 .text-container{
-    max-width: 600px;
+    max-width: 80%;
+    display: grid;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .item{
     margin-bottom: 20px;
 }
 h2{
-    font-family: 'Lucida Fax', sans-serif;
-    font: size 20px; 
+    font-family: 'Impact', sans-serif;
+    font-size: 24px; 
     color:#000000;
     margin: 10px 0; 
 }
 p{
-    font-size: 16px;
+    font-family: "Myriad";
+    font-size: 24px;
     color: #333333;
     margin:5px 0;
 }
