@@ -137,6 +137,23 @@ button {
     font-size: 20px;
     border-radius: 15px;
     border: none;
+    transition: transform 0.1s ease-in-out;
+}
+
+.card:hover .info-container p {
+    font-size: 1.2rem;
+}
+
+.card:hover button {
+    animation: vibrate 2s infinite;
+}
+
+@keyframes vibrate {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-2px); }
+    50% { transform: translateY(2px); }
+    75% { transform: translateY(-2px); }
+    100% { transform: translateY(0); }
 }
 
 @media screen and (max-width: 900px) {
