@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container__slider {
+    position: relative;
+    z-index: 0;
+    top: -80px;
+    max-width: 100%;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.buttons {
+    content: "";
+    border-radius: 30px;
+    width: 100px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 426px;
+    z-index: 2;
+}
+
+input[type=radio] {
+    position: absolute;
+    display: flex;
+    top: 430px;
+    margin: auto;
+    z-index: 3;
+    cursor: pointer;
+}
+
+input[type=radio]#item-1 {
+    transform: translateX(0px);
+}
+
+input[type=radio]#item-2 {
+    transform: translateX(-30px);
+}
+
+input[type=radio]#item-3 {
+    transform: translateX(30px);
+}
+
+.arrows {
+    position: absolute;
+    top: 50%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.arrow {
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    height: 100%;
+    max-height: 600px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+#item-2:checked~.cards #selector-1,
+#item-1:checked~.cards #selector-3,
+#item-3:checked~.cards #selector-2 {
+    transform: translateX(100%) scale(0.8);
+    opacity: .6;
+    z-index: 0;
+}
+
+#item-3:checked~.cards #selector-1,
+#item-1:checked~.cards #selector-2,
+#item-2:checked~.cards #selector-3 {
+    transform: translateX(-100%) scale(0.8);
+    opacity: .6;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #selector-1,
+#item-2:checked~.cards #selector-2,
+#item-3:checked~.cards #selector-3 {
+    transform: translateX(0) scale(1);
+    z-index: 1;
+}
+

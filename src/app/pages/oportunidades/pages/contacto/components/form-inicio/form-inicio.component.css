@@ -1,0 +1,130 @@
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2F6475;
+    opacity: 0.74;
+    padding: 40px 40px 0px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1152px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.contact-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contact-title {
+    color: #FFFFFF;
+    font-size: 32px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+}
+
+.contact-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#contact-form input, #contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #2F6475;
+    border-radius: 10px;
+    width: calc(100% - 20px);
+    max-width: 512px;
+    box-sizing: border-box;
+}
+
+input, textarea{
+    background-color: #ecffff86;
+    outline: none;
+}
+
+#contact-form textarea {
+    height: 192px;
+    border-radius: 10px;
+    resize: none;
+}
+
+#submit-btn {
+    width: 509px;                 
+    height: 64px;                  
+    border-radius: 10px;           
+    border: none;                  
+    background-color: #00001A;     
+    color: white;                  
+    font-size: 32px;               
+    cursor: not-allowed;           
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit-btn:enabled {
+    cursor: pointer;
+}
+
+p {
+    font-family: 'Raleway';
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+::placeholder {
+    color: #4E4848;
+}    
+
+@media (min-width: 768px) {
+    .contact-form-container {
+        flex-direction: row;
+    }
+
+    .contact-image, .contact-form-wrapper {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .contact-title {
+        font-size: 48px;
+    }
+
+    #contact-form input, #contact-form textarea, #submit-btn {
+        width: 90%;
+        max-width: 512px;
+    }
+}
+
