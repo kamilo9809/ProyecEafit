@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { PageRegisterRegistroComponent } from './components/page-register-registro/page-register-registro.component';
 
 @Component({
   selector: 'app-registro',
   standalone: true,
-  imports: [],
+  imports: [PageRegisterRegistroComponent],
   templateUrl: './registro.component.html',
   styleUrl: './registro.component.css'
 })
