@@ -1,0 +1,64 @@
+#map {
+  width: 1277px;
+  height: 580px;
+  position: absolute;
+  top: 4102px;
+  left: -1px;
+  gap: 0px;
+  opacity: 1;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.address {
+  text-align: center;
+}
+
+.whatsapp {
+  position: relative;
+  margin-top: 20px;
+  padding: 10px;
+  width: 275px;
+  height: 191px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px black solid;
+  box-shadow: -16px 16px 4px 0px #00000040;
+  background-color: #E0E0E0;
+}
+
+.whatsapp p {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.whatsapp:hover {
+  box-shadow: -16px 16px 4px 0px rgba(0, 0, 0, 0.6);
+  animation: animation 1s forwards  infinite;
+}
+
+@media (min-width: 768px) {
+  .contact-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 50px;
+  }
+
+  .address {
+    text-align: left;
+  }
+
+  .whatsapp {
+    margin-top: 0;
+    align-self: center;
+  }
+
+}
