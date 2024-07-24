@@ -62,3 +62,16 @@
   }
 
 }
+
+@keyframes animation {
+  0%{
+    border-color: #220A4A;
+
+  }
+  50%{
+    border-color: #d67c05;
+  }
+  100%{
+    border-color: #0baaaa;
+  }
+}
