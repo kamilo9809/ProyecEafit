@@ -1,7 +1,10 @@
-
-.text-grid{
-     background: linear-gradient(270.25deg, #ECFFFF 0.22%, #6DA4A4 99.78%);
-    ;
+.style{
+    background: linear-gradient(270.25deg, #ECFFFF 0.22%, #6DA4A4 99.78%);
+    border-radius: 20px;
 }
 
+.btn{
+    background: #2F6475;
+    color: white;
+}
 
