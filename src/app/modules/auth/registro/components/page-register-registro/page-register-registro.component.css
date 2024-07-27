@@ -1,0 +1,6 @@
+.fondo{
+    height: 800px;
+    background: url("./../../../../../../../public/assets/Fondo-padre.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
