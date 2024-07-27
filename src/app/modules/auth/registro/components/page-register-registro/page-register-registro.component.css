@@ -1,0 +1,26 @@
+.fondo{
+    height: 800px;
+    background: url("./../../../../../../../public/assets/Fondo-padre.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input{
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.514);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.style-list{
+    > div {
+        display: flex;
+        > img {
+            padding-bottom: 10px;
+        }
+    }
+}
