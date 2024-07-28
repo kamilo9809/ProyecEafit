@@ -83,7 +83,7 @@
       Crear Cuenta
     </h2>
     <div class="social-buttons text-center my-3 text-secondary py-3">
-      <button
+      <button (click)="signInWithGoogle()"
         style="
           width: 35%;
           background-color: #ffffff;
@@ -94,13 +94,8 @@
           border-radius: 5px;
           padding: 10px;
           margin: 5px;
-        "
-      >
-        <img
-          src="assets/Google.png"
-          alt="Google"
-          style="height: 20px; vertical-align: middle"
-        />
+        ">
+        <img src="assets/Google.png" alt="Google" style="height: 20px; vertical-align: middle"/>
         Sign up with Google
       </button>
       <button
