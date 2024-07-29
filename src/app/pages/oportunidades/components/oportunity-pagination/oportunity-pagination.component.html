@@ -1,1 +1,23 @@
-<p>oportunity-pagination works!</p>
+<div>
+  <div class="contenedor">
+
+    <div 
+        class="tarjeta py-5"
+        *ngFor="let item of oportunitys; let i = index"
+    >
+      <img src={{oportunitys[i].imagen}} alt="Nodo EAFIT" />
+      <div class="texto">
+        <h2 class="titulo2">{{oportunitys[i].titulo}}</h2>
+        <p class="parrafo1">{{oportunitys[i].parrafo}}</p>
+        <div>
+            <button type="button">mas información...</button>
+        </div>
+      </div>
+    </div>
+    <div class="ver-mas">
+      <button 
+        (click)="moreOportunity()"
+        type="button">ver más...</button>
+    </div>
+  </div>
+</div>
