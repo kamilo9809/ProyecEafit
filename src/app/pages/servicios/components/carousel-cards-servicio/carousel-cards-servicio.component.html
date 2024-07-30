@@ -1,1 +1,23 @@
-<p>carousel-cards-servicio works!</p>
+<div class="wrapper">
+    <h1 class="title">Nuestros Servicios</h1>
+    <ul 
+        class="carousel"
+        #scrollX
+        >
+        <li 
+        class="card"
+        *ngFor="let item of cards; let i = index"
+        >
+            <div class="info-container">
+                <h2>{{cards[i].title}}</h2>
+                <p>{{cards[i].paragraph}}</p>
+            </div>
+            <img src={{cards[i].img}} alt={{cards[i].alt}} draggable={{cards[i].draggable}}>
+            <button>¡LO QUIERO!</button>
+        </li>
+    </ul>
+    <div class="arrows">
+        <p class="i" id="left" (click)="leftPosition()">&lt;</p>
+        <p class="i" id="right" (click)="rightPosition()">&gt;</p>
+    </div>
+</div>
