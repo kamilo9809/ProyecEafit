@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { CarouselCardsServicioComponent } from './components/carousel-cards-servicio/carousel-cards-servicio.component';
 import { ConsultoriasComponent } from './pages/consultorias/consultorias.component';
 import { EstudiantesComponent } from './pages/estudiantes/estudiantes.component';
+import { CarouselCardsServicioComponent } from './components/carousel-cards-servicio/carousel-cards-servicio.component';
 
 @Component({
   selector: 'app-servicios',
