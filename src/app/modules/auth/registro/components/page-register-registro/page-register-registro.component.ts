@@ -20,4 +20,9 @@ export class PageRegisterRegistroComponent {
         console.error('Error signing in with Google:', error);
       });
   }
+
+  funcion(){
+    console.log('funciona');
+    
+  }
 }
