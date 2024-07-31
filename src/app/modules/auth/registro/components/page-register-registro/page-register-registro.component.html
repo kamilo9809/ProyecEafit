@@ -83,7 +83,7 @@
       Crear Cuenta
     </h2>
     <div class="social-buttons text-center my-3 text-secondary py-3">
-      <button (click)="signInWithGoogle()"
+      <button
         style="
           width: 35%;
           background-color: #ffffff;
@@ -94,11 +94,19 @@
           border-radius: 5px;
           padding: 10px;
           margin: 5px;
-        ">
-        <img src="assets/Google.png" alt="Google" style="height: 20px; vertical-align: middle"/>
+        "
+        (click)="signInWithGoogle()"
+      >
+        <img
+          src="assets/Google.png"
+          alt="Google"
+          style="height: 20px; vertical-align: middle"
+        />
         Sign up with Google
       </button>
       <button
+        class="button"
+        (click)="signInWithFacebook()"
         style="
           width: 35%;
           background-color: #ffffff;
@@ -122,7 +130,7 @@
     <div class="text-center fs-4 text-secondary">- o -</div>
     <form class="style-list" style="padding: 0 40px">
       <div>
-        <img src="assets/icon-user.svg" alt="icon nombre">
+        <img src="assets/icon-user.svg" alt="icon nombre" />
         <input
           type="text"
           placeholder="Nombres"
@@ -130,7 +138,7 @@
         />
       </div>
       <div>
-        <img src="assets/icon-user.svg" alt="icon apellido">
+        <img src="assets/icon-user.svg" alt="icon apellido" />
         <input
           type="text"
           placeholder="Apellidos"
@@ -138,7 +146,7 @@
         />
       </div>
       <div>
-        <img src="assets/icon-email.svg" alt="icon email">
+        <img src="assets/icon-email.svg" alt="icon email" />
         <input
           type="email"
           placeholder="Correo Electrónico"
@@ -146,7 +154,7 @@
         />
       </div>
       <div>
-        <img src="assets/icon-calendar.svg" alt="icon calendar">
+        <img src="assets/icon-calendar.svg" alt="icon calendar" />
         <input
           type="date"
           placeholder="Día de nacimiento"
@@ -154,7 +162,7 @@
         />
       </div>
       <div>
-        <img src="assets/icon-sec.svg" alt="icon candado">
+        <img src="assets/icon-sec.svg" alt="icon candado" />
         <input
           type="password"
           placeholder="Contraseña"
@@ -162,7 +170,7 @@
         />
       </div>
       <div>
-        <img src="assets/icon-sec.svg" alt="icon candado">
+        <img src="assets/icon-sec.svg" alt="icon candado" />
         <input
           type="password"
           placeholder="Confirma tu Contraseña"
