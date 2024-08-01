@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    text-align: left;
+    color: white;
+}
+
+.background-image {
+    border: 2px rgb(97, 97, 228) solid;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+}
+
+.text-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2em;
+    margin-right: 30;
+    text-align: center;
+}
+
+.first-paragraph {
+    margin-top: 40px;
+    font-size: 1.5em;
+    margin-right: 30;
+    margin-left: 40px;
+
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1.5em;
+    margin-left: 40px;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: -200px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end; /* Asegura que los iconos estén a la derecha */
+    align-items: flex-end; /* Asegura que los iconos estén en la parte inferior */
+}
+
+.social-icons img {
+    width: 32px;
+    margin-left: 10px; /* Separación entre iconos */
+}
