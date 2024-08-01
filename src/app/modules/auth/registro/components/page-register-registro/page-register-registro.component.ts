@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiGoogleService } from '../../service/api-google/api-google.service';
 import { FacebookLoginProvider, SocialAuthService } from '@abacritt/angularx-social-login';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -9,10 +10,21 @@ import { FacebookLoginProvider, SocialAuthService } from '@abacritt/angularx-soc
   styleUrls: ['./page-register-registro.component.css']
 })
 export class PageRegisterRegistroComponent implements OnInit {
+  form!: FormGroup;
   constructor(
     private apiGoogleService: ApiGoogleService,
-    private authService: SocialAuthService
-  ) {}
+    private authService: SocialAuthService,
+    private method: FormBuilder,
+  ) {
+    this.form=this.method.group({
+      name: ["", Validators.required],
+      Apellidos: ["", Validators.required],
+      CorreoElectronico: ["", Validators.required],
+      diaDeNacimiento: ["00/00/0000", Validators.required],
+      Contraseña: ["", Validators.required],
+      
+    })
+  }
 
   user:any
   loggedIn:any
@@ -40,4 +52,26 @@ export class PageRegisterRegistroComponent implements OnInit {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID)
   }
 
+onSubmit(){
+  if (this.form.valid) {
+    console.log(this.form.value);
+    
+    
+  }else{
+    console.log("Form Invalid");
+    
+  }
+  this.form=this.method.group({
+    name: "",
+    Apellidos: "",
+    CorreoElectronico: "",
+    diaDeNacimiento: "",
+    Contraseña: "",
+    
+  })
+
 }
+
+}
+
+

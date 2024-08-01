@@ -5,14 +5,16 @@ import {
   FacebookLoginProvider
 } from '@abacritt/angularx-social-login';
 import { PageRegisterRegistroComponent } from '../page-register-registro.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [PageRegisterRegistroComponent],
   imports: [
     CommonModule,
-    SocialLoginModule
+    SocialLoginModule,
+    ReactiveFormsModule
+    
   ],
   exports:[PageRegisterRegistroComponent],
   providers: [
