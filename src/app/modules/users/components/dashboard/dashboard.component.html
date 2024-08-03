@@ -1,1 +1,29 @@
-<p>dashboard works!</p>
+<!-- menu.component.html -->
+<div class="d-flex">
+    <div>
+      <div><!-- Aquí va el logo --></div>
+      <nav>
+        <ul>
+          <li>
+            <a [routerLink]="'/private/home'">Home</a>
+          </li>
+          <li>
+            <a [routerLink]="'/private/favoritos'">Favoritos</a>
+          </li>
+          <li>
+            <div>
+              <select name="option" id="option" (change)="onSelectChange($event)">
+                <option value="/private/administrador/lista-usuarios">Administrador</option>
+                <option *ngFor="let item of routes" [value]="'/private/administrador/'+item.path">{{ item.title }}</option>
+              </select>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <button (click)="logOut()">Cerrar sesión</button>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+  

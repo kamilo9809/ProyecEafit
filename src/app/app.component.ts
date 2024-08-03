@@ -8,13 +8,7 @@ import { WhatsappButtonComponent } from './pages/components/whatsapp-button/what
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    NavbarComponent,
-    FooterComponent,
-    WompiButtonComponent,
-    WhatsappButtonComponent,
-  ],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

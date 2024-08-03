@@ -12,6 +12,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  public menu = routes
-  .map(route=>route ?? [])
+  public menu = routes[0].children?.map(items=>items ?? [])
 }
