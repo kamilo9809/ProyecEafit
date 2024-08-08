@@ -1,18 +1,26 @@
 <!-- menu.component.html -->
+<style>
+  ul{
+    list-style-type: none; ;
+  }
+</style>
 <div class="d-flex">
-    <div>
-      <div><!-- Aquí va el logo --></div>
+    <div class="rectangulo">
+      <div #ejemplo><img src="/assets/logoDashboard.svg" alt="logoDashboard"></div>
       <nav>
         <ul>
-          <li>
+          <li class="">
+            <img class="home" src="/assets/imgHome.svg" alt="home">
             <a [routerLink]="'/private/home'">Home</a>
           </li>
           <li>
+            <img class="favoritos" src="/assets/imgFavoritos.svg" alt="favoritos">
             <a [routerLink]="'/private/favoritos'">Favoritos</a>
           </li>
           <li>
             <div>
               <select name="option" id="option" (change)="onSelectChange($event)">
+                <img src="/public/assets/imgAdministrador.svg" alt="Administrador">
                 <option value="/private/administrador/lista-usuarios">Administrador</option>
                 <option *ngFor="let item of routes" [value]="'/private/administrador/'+item.path">{{ item.title }}</option>
               </select>
@@ -20,7 +28,8 @@
           </li>
         </ul>
       </nav>
-      <div>
+      <div class="d-flex justify-content-xxl-end">
+        <img src="/assets/imgCerrarsesion.svg" alt="cerrar sesion">
         <button (click)="logOut()">Cerrar sesión</button>
       </div>
     </div>

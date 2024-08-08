@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { routes } from '../../../../app.routes';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
@@ -10,12 +10,20 @@ import { Router, RouterModule } from '@angular/router';
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
-export class DashboardComponent {
+export class DashboardComponent implements AfterViewInit{
   public routes = routes[1].children![2].children?.map(item=>item ?? [])
+  @ViewChild("ejemplo") ejemplo!:ElementRef
 
   constructor(
     private router: Router
-  ){}
+  ){
+  }
+
+  ngAfterViewInit(): void {
+    console.log(this.ejemplo.nativeElement);
+    
+    
+  }
 
   logOut(){
     this.router.navigate(['/public/ingresa'])
