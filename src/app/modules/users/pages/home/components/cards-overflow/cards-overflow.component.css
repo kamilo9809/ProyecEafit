@@ -1,0 +1,94 @@
+.contenedora {
+    background-color: #ECECEC;
+    width: 405px;
+    height:850px;
+    Top: 185px;
+    Left: 447px;
+    border-radius: 30px;
+    
+}
+
+.card {
+    background-color: #FCF2E6;
+    width: 355px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 10px 20px 30px 30px;
+    padding: 20px;
+    width: 355px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card-img {
+    width: 329px;
+    height: 122px;
+    top: 10.5px;
+    left: 11.55px;
+    
+}
+
+.card-title {
+    font-family : impact;
+    font-size: 25px;
+    color: #060606;   
+    line-height: 23.47px;
+    margin: 15px 0;
+    text-align: center;
+    width: 400px;
+    height: 23px;
+    top: 141px;
+    left: 22px
+}
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    font-family : impact;
+    width: 153px;
+    height: 50px;
+    top: 187px;
+    left: 11.55px;    
+    padding: 10px 15px;
+    border: 1px #1C2362 solid;
+    border-radius: 5px;   
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #ddd;
+    
+}
+
+.btn-save {
+    background-color: #FCF2E6;
+    color: #333;
+    border: 1px #4CAF50 solid;
+}
+
+.btn-save:hover {
+    background-color: #FCF2E6;
+
+   
+}
+
+.btn-save:active {
+    background-color: #FCF2E6; /* Verde */
+    color: white;
+    
+}
+
+.btn-save:focus {
+    background-color: #4CAF50; /* Verde */
+    color: black;
+    border: 1px #174119 solid;
+}
