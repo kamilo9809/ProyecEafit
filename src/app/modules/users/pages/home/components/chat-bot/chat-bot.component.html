@@ -4,22 +4,26 @@
         <h3>Fundación Antivirus</h3>
     </div>
     <div id="chat-messages">
-        <div *ngFor="let message of chat; let i = index">
-            <p>Hola, ¿en qué puedo ayudarte?</p>
+        <div >
+            <p *ngFor="let message of chat; let i = index">
+                {{message.message}}
+            </p>
         </div>
-        <div>
-            <p>Quisiera información acerca de las ofertas académicas</p>
+        <div *ngFor="let message of chatUser; let i = index">
+            <span>
+                {{message.message}}
+            </span>
         </div>
     </div>
     <div class="d-flex">
         <div id="chat-input-container">
-            <div id="chat-input">
-                <input type="text" id="user-input" placeholder="Escribe un mensaje">
+            <div id="chat-input" >
+                <input type="text" #data id="user-input" placeholder="Escribe un mensaje">
                 <button id="send-button"></button>
             </div>
         </div>
         <div class="d-flex align-contents-center">
-            <button class="border-0">
+            <button class="border-0" (click)="send()">
                 <img src="assets/Icono-enviar.svg" alt="Icono Enviar">
             </button>
         </div>
