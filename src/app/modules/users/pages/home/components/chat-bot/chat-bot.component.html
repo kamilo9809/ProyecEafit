@@ -1,17 +1,27 @@
 <div id="chat-bot">
     <div id="chat-header">
-        <img src="ruta-del-logo.png" alt="Logo Fundación Antivirus" id="chat-logo">
+        <img src="assets/LogoFATV.png" alt="Logo Fundación Antivirus" id="chat-logo">
         <h3>Fundación Antivirus</h3>
     </div>
     <div id="chat-messages">
-        <!-- Los mensajes del bot y del usuario se mostrarán aquí -->
+        <div *ngFor="let message of chat; let i = index">
+            <p>Hola, ¿en qué puedo ayudarte?</p>
+        </div>
+        <div>
+            <p>Quisiera información acerca de las ofertas académicas</p>
+        </div>
+    </div>
+    <div class="d-flex">
+        <div id="chat-input-container">
+            <div id="chat-input">
+                <input type="text" id="user-input" placeholder="Escribe un mensaje">
+                <button id="send-button"></button>
+            </div>
+        </div>
+        <div class="d-flex align-contents-center">
+            <button class="border-0">
+                <img src="assets/Icono-enviar.svg" alt="Icono Enviar">
+            </button>
+        </div>
     </div>
 </div>
-<div id="chat-input-container">
-    <div id="chat-input">
-        <input type="text" id="user-input" placeholder="Escribe un mensaje">
-        <button id="send-button"></button>
-    </div>
-</div>
-
-
