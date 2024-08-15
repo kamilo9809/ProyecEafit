@@ -3,5 +3,5 @@ export const chat= [
 ]
 
 export const chatUser=[
-    {name: "usuario", message: "Quisiera información acerca de las ofertas academicas"}
+    {name: "usuario", message: "Quisiera información acerca de las ofertas académicas"}
 ]
