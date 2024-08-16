@@ -1,21 +1,17 @@
 .contenedora {
     background-color: #ECECEC;
-    width: 405px;
-    height:850px;
+    height:100vh;
     Top: 185px;
     Left: 447px;
     border-radius: 30px;
-    
+    overflow-y: auto;
 }
 
 .card {
     background-color: #FCF2E6;
-    width: 355px;
-    height: 250px;
     border-radius: 10px;
     margin: 10px 20px 30px 30px;
     padding: 20px;
-    width: 355px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +19,6 @@
 }
 
 .card-img {
-    width: 329px;
     height: 122px;
     top: 10.5px;
     left: 11.55px;
@@ -37,8 +32,6 @@
     line-height: 23.47px;
     margin: 15px 0;
     text-align: center;
-    width: 400px;
-    height: 23px;
     top: 141px;
     left: 22px
 }
