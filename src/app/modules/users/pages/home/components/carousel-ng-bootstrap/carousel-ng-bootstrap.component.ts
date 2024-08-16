@@ -10,4 +10,5 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 })
 export class CarouselNgBootstrapComponent {
   images = ["assets/grid-article-3-noticias(1).png", "assets/grid-article-3-noticias(2).png", "assets/grid-article-3-noticias(3).png"];
+  public estilos:string = 'width:70vh; height:50vh;'
 }
