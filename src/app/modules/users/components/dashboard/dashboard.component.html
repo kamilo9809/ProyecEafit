@@ -5,7 +5,7 @@
   }
 </style>
 <div class="d-flex">
-  <div class="rectangulo d-flex justify-content-between flex-column">
+  <div class="rectangulo d-flex justify-content-between flex-column w-25">
     <div >
       <img src="/assets/logoDashboard.svg" alt="logoDashboard" />
     </div>
@@ -18,7 +18,7 @@
           <img class="home" src="/assets/imgHome.svg" alt="home" />
           <a
             [routerLink]="'/private/home'"
-            class="text-decoration-none text-black fs-4"
+            class="text-decoration-none text-black fs-5"
             >Home</a
           >
         </li>
@@ -30,7 +30,7 @@
           />
           <a
             [routerLink]="'/private/favoritos'"
-            class="text-decoration-none text-black fs-4"
+            class="text-decoration-none text-black fs-5"
             >Favoritos</a
           >
         </li>
@@ -45,7 +45,7 @@
               name="option"
               id="option"
               (change)="onSelectChange($event)"
-              class="border-0 fs-4"
+              class="border-0 fs-5"
               style="background-color:  #ECECEC"
              >
            
@@ -65,7 +65,7 @@
     </nav>
     <div class="d-flex justify-content-xxl-end mb-5 ms-4 gap-3">
       <img src="/assets/imgCerrarsesion.svg" alt="cerrar sesion" />
-      <button (click)="logOut()" class="border-0 fs-4">Cerrar sesión</button>
+      <button (click)="logOut()" class="border-0 fs-5">Cerrar sesión</button>
     </div>
   </div>
   <router-outlet></router-outlet>
