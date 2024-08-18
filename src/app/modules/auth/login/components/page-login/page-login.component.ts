@@ -15,6 +15,12 @@ import {
   styleUrl: './page-login.component.css',
 })
 export class PageLoginComponent {
+signInWithFacebook() {
+throw new Error('Method not implemented.');
+}
+signInWithGoogle() {
+throw new Error('Method not implemented.');
+}
   constructor(private router: Router) {}
   onSubmit(){
     this.router.navigate(['/private/home'])
