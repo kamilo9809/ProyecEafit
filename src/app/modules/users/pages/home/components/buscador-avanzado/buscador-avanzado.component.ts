@@ -3,6 +3,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { dropdownCiudad, Oportunidad, sector } from './data/dataDropdowns';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { dataOportunidades } from './data/dataOportunidades';
+import { User } from '../../../../../auth/interface/user';
 
 @Component({
   selector: 'app-buscador-avanzado',
@@ -21,11 +22,9 @@ export class BuscadorAvanzadoComponent {
   public dropdownOportunidad = Oportunidad.map(item=>item ?? [])
   public dropdownSector = sector.map(item=>item ?? [])
   public dropdownCiudadObject = dropdownCiudad.map(item=>item ?? [])
-  public datos = {
-    nombre: 'Maria Juana Ramirez',
-    rol:'Administrador',
-    imagen: 'assets/fotoPerfil.svg'
-  }
+  public datos: User[] = localStorage.getItem('user') 
+  ? JSON.parse(localStorage.getItem('user') as any) 
+  : [];
   public oportunidades = dataOportunidades
   public fullText:string[] = this.oportunidades.map(item=>item.parrafo)
   public shortText: string[] = this.fullText.map(text => 

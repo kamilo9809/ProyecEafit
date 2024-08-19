@@ -5,10 +5,10 @@
         class="d-flex border-end border-black gap-4 align-items-center ps-2"
         style="width: 40%"
       >
-        <img src="{{ datos.imagen }}" alt="imagen de perfil" />
+        <img src="assets/fotoPerfil.svg" alt="imagen de perfil" />
         <div>
-          <h2 class="fs-5">{{ datos.nombre }}</h2>
-          <p>{{ datos.rol }}</p>
+          <h2 class="fs-5">{{ datos[0].nombre }} {{datos[0].Apellido}}</h2>
+          <p>{{ datos[0].Rol }}</p>
         </div>
       </div>
       <div class="d-flex align-items-center w-50 position-relative">
