@@ -1,5 +1,6 @@
 #chat-bot {
-    height: 396px;
+    width: 100%;
+    height: 50vh;
     border: 1px solid #ccc;
     border-radius: 30px;
     display: flex;
@@ -67,7 +68,7 @@ span{
 }
 
 #chat-input-container {
-    width: 300px;
+    width: 100%;
     height: 51.09px;
     background-color: #E0E0E0;
     padding: 10px;

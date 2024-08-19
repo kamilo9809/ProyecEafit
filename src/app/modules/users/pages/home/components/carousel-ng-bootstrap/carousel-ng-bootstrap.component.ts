@@ -9,5 +9,6 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './carousel-ng-bootstrap.component.css'
 })
 export class CarouselNgBootstrapComponent {
-  images = ["assets/grid-article-3-noticias(1).png", "assets/grid-article-3-noticias(2).png", "assets/grid-article-3-noticias(3).png"];
+  images = ["assets/grupo.jpg", "assets/señora-riendo.jpg", "assets/tomando-foto-al-piso.jpg"];
+  public estilos:string = 'img-fluid rounded-5'
 }
