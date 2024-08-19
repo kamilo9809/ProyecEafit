@@ -1,5 +1,6 @@
 .custom-bg {
     background-color: #33526F;
+    box-shadow: 0px 13px 15px 0px rgba(0, 0, 0, 0.62);
 }
 
 .custom-h {
@@ -7,6 +8,6 @@
 }
 
 .custome-img {
-    width: 40vw;
+    width: 100%;
     height: auto;
 }

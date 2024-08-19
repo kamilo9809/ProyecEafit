@@ -1,0 +1,179 @@
+<div class="d-flex" style="position: relative">
+  <img src="assets/poligono.svg" alt="Fondo degradado" />
+  <div class="background">
+    <div
+      class="py-5"
+      style="
+        padding: 80px;
+        border-radius: 10px;
+        border: 3px solid #2c395b;
+        width: 550px;
+        height: 666px;
+        top: 258px;
+        left: 365px;
+        text-align: center;
+      "
+    >
+      <div class="login-container" style="margin-top: -50px">
+        <img src="assets/LogoFATV.png" alt="Logo" />
+      </div>
+      <div>
+        <div class="buttons d-flex py-3">
+          <button
+            style="
+              background: #2f6475;
+              color: #ffffff;
+              width: 130px;
+              height: 48px;
+              top: 449px;
+              left: 423px;
+              gap: 0px;
+              border-radius: 15px 0px 0px 0px;
+              opacity: 0px;
+            "
+            routerLink="/public/ingresar"
+          >
+            ingresar
+          </button>
+          <button
+            style="
+              background: #00001a;
+              color: #ffffff;
+              width: 137px;
+              height: 48px;
+              top: 449px;
+              left: 553px;
+              gap: 0px;
+              border-radius: 0px 0px 15px 0px;
+              opacity: 0px;
+            "
+            routerLink="/public/registrate"
+          >
+            registrarse
+          </button>
+        </div>
+        <form>
+          <div
+            class="input-group-text"
+            style="
+              margin-bottom: 15px;
+              background: none;
+              border-color: #868585;
+              width: 433px;
+              height: 56px;
+              top: 527px;
+              left: 423px;
+            "
+          >
+            <img
+              src="assets/icon-email.svg"
+              class="input-icon"
+              alt="Email Icon"
+            />
+            <input
+              #email
+              type="email"
+              name="email"
+              id="email"
+              placeholder=" Correo Electrónico"
+            />
+          </div>
+          <div
+            class="input-group-text"
+            style="
+              background: none;
+              border-color: #868585;
+              width: 433px;
+              height: 56px;
+              top: 527px;
+              left: 423px;
+            "
+          >
+            <img
+              src="assets/icon-sec.svg"
+              class="input-icon"
+              alt="Password Icon"
+            />
+            <input
+              #password
+              type="password"
+              name="password"
+              id="password"
+              placeholder=" Contraseña"
+            />
+          </div>
+          <button
+            class="my-3"
+            type="button"
+            (click)="onSubmit(email, password)"
+            style="
+              background: linear-gradient(90deg, #2c395b 0%, #5d79c1 100%);
+              width: 433px;
+              height: 63px;
+              color: #ffffff;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              border-radius: 20px;
+              border: none;
+            "
+          >
+            Iniciar Sesión
+          </button>
+          <div class="linea-container text-center fs-4">- o -</div>
+        </form>
+        <div class="social-buttons text-center text-secondary">
+          <button
+            style="
+              width: 245px;
+              height: 62px;
+              top: 825px;
+              left: 395px;
+              background-color: #ffffff;
+              -webkit-box-shadow: 0px 4px 8px -1px rgba(150, 147, 150, 1);
+              -moz-box-shadow: 0px 4px 8px -1px rgba(150, 147, 150, 1);
+              box-shadow: 0px 4px 8px -1px rgba(150, 147, 150, 1);
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              padding: 10px;
+              margin: 5px;
+            "
+            (click)="signInWithGoogle()"
+          >
+            <img
+              src="assets/Google.png"
+              alt="Google"
+              style="height: 20px; vertical-align: middle"
+            />
+            Sign up with Google
+          </button>
+          <button
+            class="button"
+            (click)="signInWithFacebook()"
+            style="
+              width: 245px;
+              height: 62px;
+              top: 825px;
+              left: 660px;
+              background-color: #ffffff;
+              -webkit-box-shadow: 0px 4px 8px -1px rgba(150, 147, 150, 1);
+              -moz-box-shadow: 0px 4px 8px -1px rgba(150, 147, 150, 1);
+              box-shadow: 0px 4px 8px -1px rgba(150, 147, 150, 1);
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              padding: 10px;
+              margin: 5px;
+            "
+          >
+            <img
+              src="assets/Facebook.png"
+              alt="Facebook"
+              style="height: 20px; vertical-align: middle"
+            />
+            Sign up with Facebook
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

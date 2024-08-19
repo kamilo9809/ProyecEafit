@@ -1,0 +1,53 @@
+<form>
+	<div class="mb-3 row">
+	  <label for="table-complete-search" class="col-xs-3 col-sm-auto col-form-label">Buscar:</label>
+	  <div class="col-xs-3 col-sm-auto">
+		<input
+		  id="table-complete-search"
+		  type="text"
+		  class="form-control"
+		  name="searchTerm"
+		  [(ngModel)]="service.searchTerm"
+		/>
+	  </div>
+	  <span *ngIf="service.loading$ | async" class="col col-form-label">Cargando...</span>
+	</div>
+  
+	<table class="table table-striped">
+	  <thead>
+		<tr>
+		  <th scope="col">#</th>
+		  <th scope="col" sortable="titulo" (sort)="onSort($event)">Título</th>
+		  <th scope="col" sortable="oportunidad" (sort)="onSort($event)">Tipo de Oportunidad</th>
+		  <th scope="col" sortable="sector" (sort)="onSort($event)">Sector</th>
+		  <th scope="col" sortable="ubicacion" (sort)="onSort($event)">Ubicación</th>
+		  <th scope="col" sortable="fechas" (sort)="onSort($event)">Fechas</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr *ngFor="let oportunidad of oportunidades$ | async; let index = index">
+		  <th scope="row">{{ index + 1 }}</th>
+		  <td><ngb-highlight [result]="oportunidad.titulo" [term]="service.searchTerm"></ngb-highlight></td>
+		  <td><ngb-highlight [result]="oportunidad.oportunidad" [term]="service.searchTerm"></ngb-highlight></td>
+		  <td><ngb-highlight [result]="oportunidad.sector" [term]="service.searchTerm"></ngb-highlight></td>
+		  <td><ngb-highlight [result]="oportunidad.ubicacion" [term]="service.searchTerm"></ngb-highlight></td>
+		  <td><ngb-highlight [result]="oportunidad.fechas" [term]="service.searchTerm"></ngb-highlight></td>
+		</tr>
+		<tr *ngIf="(oportunidades$ | async)?.length === 0">
+		  <td colspan="6" style="text-align: center">Oportunidades no encontradas</td>
+		</tr>
+	  </tbody>
+	</table>
+  
+	<div class="d-flex justify-content-between p-2">
+	  <ngb-pagination [collectionSize]="(total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize">
+	  </ngb-pagination>
+  
+	  <select class="form-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
+		<option [ngValue]="2">2 oportunidades por página</option>
+		<option [ngValue]="4">4 oportunidades por página</option>
+		<option [ngValue]="6">6 oportunidades por página</option>
+	  </select>
+	</div>
+  </form>
+  

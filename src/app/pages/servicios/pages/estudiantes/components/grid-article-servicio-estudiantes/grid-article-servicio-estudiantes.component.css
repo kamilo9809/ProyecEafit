@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Renogare';
+    src: url('../../../../../../../fonts/Renogare-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Acumin';
+    src: url('../../../../../../../fonts/Acumin-Variable-Concept.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }

@@ -1,1 +1,74 @@
-<p>dashboard works!</p>
+<!-- menu.component.html -->
+<style>
+  ul {
+    list-style-type: none;
+  }
+</style>
+<div class="d-flex">
+  <div class="rectangulo d-flex justify-content-between flex-column w-25">
+    <div >
+      <img src="/assets/logoDashboard.svg" alt="logoDashboard" />
+    </div>
+    <nav class="" style="height: 40vh">
+      <ul
+        class="d-flex flex-column justify-content-between"
+        style="height: 25vh"
+      >
+        <li class="d-flex gap-3">
+          <img class="home" src="/assets/imgHome.svg" alt="home" />
+          <a
+            [routerLink]="'/private/home'"
+            class="text-decoration-none text-black fs-5"
+            >Home</a
+          >
+        </li>
+        <li class="d-flex gap-3">
+          <img
+            class="favoritos"
+            src="/assets/imgFavoritos.svg"
+            alt="favoritos"
+          />
+          <a
+            [routerLink]="'/private/favoritos'"
+            class="text-decoration-none text-black fs-5"
+            >Favoritos</a
+          >
+        </li>
+        <li class="d-flex gap-3">
+          <div #datos class="d-flex gap-2" style="display: none;">
+            <img 
+            src="/assets/imgAdministrador.svg"
+            alt="Administrador"
+             >
+            <select 
+              #selectOptions
+              name="option"
+              id="option"
+              (change)="onSelectChange($event)"
+              class="border-0 fs-5"
+              style="background-color:  #ECECEC"
+             >
+           
+              <option value="/private/administrador/lista-usuarios">
+                Administrador
+              </option>
+              <option
+                *ngFor="let item of routes"
+                [value]="'/private/administrador/' + item.path"
+              >
+                {{ item.title }}
+              </option>
+            </select>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="d-flex justify-content-xxl-end mb-5 ms-4 gap-3">
+      <img src="/assets/imgCerrarsesion.svg" alt="cerrar sesion" />
+      <button (click)="logOut()" class="border-0 fs-5">Cerrar sesión</button>
+    </div>
+  </div>
+  <div class="w-75">
+    <router-outlet></router-outlet>
+  </div>
+</div>

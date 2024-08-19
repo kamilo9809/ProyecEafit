@@ -6,15 +6,16 @@ import {
 } from '@abacritt/angularx-social-login';
 import { PageRegisterRegistroComponent } from '../page-register-registro.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [PageRegisterRegistroComponent],
   imports: [
     CommonModule,
     SocialLoginModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    RouterModule
   ],
   exports:[PageRegisterRegistroComponent],
   providers: [
@@ -33,7 +34,10 @@ import { ReactiveFormsModule } from '@angular/forms';
           console.error(err);
         }
       } as SocialAuthServiceConfig,
-    }
+    },
+    provideHttpClient(
+      withFetch()
+    )
   ],
 })
 export class RegisterFacebookConfigModule { }

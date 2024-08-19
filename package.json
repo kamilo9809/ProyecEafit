@@ -18,14 +18,17 @@
     "@angular/core": "^18.0.0",
     "@angular/fire": "^18.0.1",
     "@angular/forms": "^18.0.0",
+    "@angular/localize": "^18.1.4",
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/platform-server": "^18.0.0",
     "@angular/router": "^18.0.0",
     "@angular/ssr": "^18.0.3",
+    "@ng-bootstrap/ng-bootstrap": "^17.0.0",
+    "@popperjs/core": "^2.11.8",
     "express": "^4.18.2",
-    "node-fetch": "^3.3.2",
     "firebase": "^10.12.4",
+    "node-fetch": "^3.3.2",
     "rxjs": "~7.8.0",
     "sheetdb-node": "^0.0.12",
     "tslib": "^2.3.0",
@@ -47,4 +50,3 @@
     "typescript": "~5.4.2"
   }
 }
-
