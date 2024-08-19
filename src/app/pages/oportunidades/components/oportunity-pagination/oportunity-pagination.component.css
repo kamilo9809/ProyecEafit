@@ -15,33 +15,29 @@
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
-    align-items: center;
     position: relative;
 }
 
 .tarjeta img {
-    height: 150px;
-    max-width: 140px;
+    height: 200px;
+    max-width: 200px;
     margin-right: 20px;
     border-radius: 5px;
 }
 
-.texto {
-    flex: 1;
-    position: relative;
-}
 
 .titulo2 {
     font-size: 2em;
     margin: 0 0 10px 0;
     color: #000000;
+    font-family: 'Renogare'
 }
 
 .parrafo1 {
     font-size: 1em;
     margin: 0 0 20px 0;
     color: #000000;
-    max-width: 500px;
+    font-family: 'Acumin'
 }
 
 button {
@@ -56,6 +52,7 @@ button {
     position: absolute; /* Hacer que el botón tenga posicionamiento absoluto */
     bottom: 20px; /* Ajusta según sea necesario */
     right: 20px; 
+    font-family: 'Acumin';
 }
 
 button:hover {

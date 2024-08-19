@@ -1,9 +1,8 @@
 .wrapper {
-    height: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2vw;
-    margin: 2vw 3vw 14vw 3vw;
+    margin-bottom: 20px;
 }
 
 .item {
@@ -12,8 +11,9 @@
     border-radius: 10px;
 }
 
-h1 {
-    font-size: 3vw;
+h2 {
+    font-family: 'Acumin';
+    font-weight: bold;
 }
 
 .item2 {
@@ -50,11 +50,8 @@ button {
     height: 50px;
     background-color: #2F6475;
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
     color: white;
-    font-size: 2vw;
+    font-size: 1vw;
 }
 
-img {
-    width: 35vw;
-}

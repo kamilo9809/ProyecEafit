@@ -1,9 +1,8 @@
 .contenedor{
-    width: 90%;
+    width: 100%;
     display:row;
     flex-direction: column;
     justify-content: center;
-    padding-left: 5%;
 }
 
 .Link{
@@ -20,7 +19,21 @@
 
 .lista{
     font-size: 36px;
-    padding-top:50px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 255, 0.137);
+    backdrop-filter: blur(20px);
+    >div>
+    li{
+        text-decoration: none;
+        list-style: none;
+    }
+    li:hover{
+        background-color: rgb(26, 3, 70);
+        color: white;
+        padding: 10px;
+        border-radius: 20px;
+    }
 }
 
 

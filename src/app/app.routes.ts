@@ -133,7 +133,7 @@ export const routes: Routes = [
   {
     path: 'private',
     title: 'private',
-    //canActivate: [loginAccessGuard],
+    canActivate: [loginAccessGuard],
     loadComponent: () =>
       import('./modules/users/user.component').then((m) => m.UserComponent),
     children: [

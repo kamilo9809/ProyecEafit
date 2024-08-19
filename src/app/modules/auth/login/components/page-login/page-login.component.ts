@@ -45,7 +45,11 @@ export class PageLoginComponent implements OnInit {
   }
 
   onSubmit(email:HTMLInputElement,password: HTMLInputElement) {
-    this.apiExcelConnectionService.loginSesion(email.value,password.value)
+    if (email.value && password.value) {
+      this.apiExcelConnectionService.loginSesion(email.value,password.value)
+    }else{
+      alert('Ingrese email y clave para poder ingresar')
+    }
   }
 
   signInWithFacebook() {
