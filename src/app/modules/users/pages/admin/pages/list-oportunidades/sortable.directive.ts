@@ -1,7 +1,7 @@
 import { Directive, EventEmitter, Input, Output } from '@angular/core';
-import { Country } from './core/country';
+import { Oportunidad } from '../../../home/components/buscador-avanzado/interface/parameters';
 
-export type SortColumn = keyof Country | '';
+export type SortColumn = keyof Oportunidad | '';
 export type SortDirection = 'asc' | 'desc' | '';
 const rotate: { [key: string]: SortDirection } = { asc: 'desc', desc: '', '': 'asc' };
 

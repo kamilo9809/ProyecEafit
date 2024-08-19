@@ -27,6 +27,7 @@ import { ApiExcelConnectionService } from '../../../registro/service/connection/
 })
 export class PageLoginComponent implements OnInit {
   constructor(
+    private router: Router,
     private apiGoogleService: ApiGoogleService,
     private socialAuthService: SocialAuthService,
     private apiExcelConnectionService: ApiExcelConnectionService,
@@ -59,5 +60,9 @@ export class PageLoginComponent implements OnInit {
       .catch((error) => {
         console.error('Error signing in with Google:', error);
       });
+  }
+
+  modoDeveloper(){
+    this.router.navigate(['/private/administrador/lista-oportunidades'])
   }
 }

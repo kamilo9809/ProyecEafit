@@ -1,1 +1,44 @@
-<p>cards-oportunidad works!</p>
+<div class="contenedorCards row rounded-5 container-xxl">
+  <div
+    class="col-12 col-md-6 mb-4 d-flex justify-content-center"
+    style="height: 50vh"
+    *ngFor="let items of cards; let i = index"
+  >
+    <div
+      class="h-100 p-3 rounded-3"
+      style="background-color: #dcdcdc; width: 80%"
+    >
+      <div class="w-100 h-50 d-flex flex-column justify-content-between">
+        <img
+          class="w-100 h-100 object-fit-cover"
+          src="{{ items.foto }}"
+          alt="foto oportunidad"
+        />
+      </div>
+      <div class="h-25">
+        <h2 class="fs-5">{{ items.titulo }}</h2>
+      </div>
+      <div
+        class="d-flex justify-content-center align-items-end h-25 gap-2"
+        style="height: 10vh"
+      >
+        <button
+          class="fw-bold py-2 px-4 w-50 rounded-4 border-1"
+          style="border-color: #1c2362"
+        >
+          Ver mas...
+        </button>
+        <button
+          class="fw-bold py-2 w-50 rounded-4 border-1"
+          style="
+            background-color: rgba(255, 0, 0, 0.301);
+            border-color: #621c1c;
+          "
+          (click)="dropOportunity(i)"
+        >
+          Quitar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
