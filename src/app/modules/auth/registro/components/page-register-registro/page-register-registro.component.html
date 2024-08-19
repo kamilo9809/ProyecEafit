@@ -128,12 +128,12 @@
       </button>
     </div>
     <div class="text-center fs-4 text-secondary">- o -</div>
-    <form 
-      class="style-list" 
-      style="padding: 0 40px" 
+    <form
+      class="style-list"
+      style="padding: 0 40px"
       [formGroup]="form"
       (ngSubmit)="onSubmit()"
-      >
+    >
       <div>
         <img src="assets/icon-user.svg" alt="icon nombre" />
         <input
@@ -203,7 +203,10 @@
       </button>
     </form>
     <div class="text-center mt-2">
-      <small>¿Ya tienes creada una cuenta? <a href="#">Inicia sesión</a></small>
+      <small
+        >¿Ya tienes creada una cuenta?
+        <a routerLink="/public/ingresa">Inicia sesión</a></small
+      >
     </div>
   </div>
 </div>

@@ -7,6 +7,7 @@ import {
 import { PageRegisterRegistroComponent } from '../page-register-registro.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [PageRegisterRegistroComponent],
@@ -14,6 +15,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     CommonModule,
     SocialLoginModule,
     ReactiveFormsModule,
+    RouterModule
   ],
   exports:[PageRegisterRegistroComponent],
   providers: [
